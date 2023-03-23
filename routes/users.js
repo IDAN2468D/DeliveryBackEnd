@@ -16,7 +16,7 @@ router.get("/userInfo", async (req, res) => {
         res.status(401).json({ msg: "you must send token" })
     }
     try {
-        let decodeToken = jwt.verify(token, "MONKYSSECRET");
+        let decodeToken = jwt.verify(token, "KAZAMIDAN");
         let user = await UsersModel.findOne({ _id: decodeToken._id }, { pass: 0 });
         res.json(user)
     }
