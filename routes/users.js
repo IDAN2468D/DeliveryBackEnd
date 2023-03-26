@@ -26,7 +26,7 @@ router.get("/userInfo", async (req, res) => {
 
 })
 
-router.post("/", async (req, res) => {
+router.post("/users", async (req, res) => {
     const validBady = validUser(req.body);
     if (validBady.error) {
         return res.status(400).json(validBady.error.details);
