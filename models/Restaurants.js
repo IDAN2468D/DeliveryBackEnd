@@ -9,7 +9,9 @@ const RestaurantsSchema = new mongoose.Schema({
     location: String,
     distance: Number,
     time: Number,
-    images: Array,
+    logo: String,
+    poster: String,
+    cover: String,
     categories: Array
 })
 
