@@ -11,7 +11,7 @@ const FoodsSchema = new mongoose.Schema({
     ingredients: String,
 })
 
-const FoodsModal = mongoose.model("restaurants", FoodsSchema);
+const FoodsModal = mongoose.model("foods", FoodsSchema);
 
 exports.FoodsModal = FoodsModal;
 
