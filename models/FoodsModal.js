@@ -18,7 +18,7 @@ exports.FoodsModal = FoodsModal;
 exports.validRestaurants = (_bodyData) => {
     let joiSchema = Joi.object({
         name: Joi.string().min(2).max(99).required(),
-        price: Joi.number().min(2).max(99).required(),
+        price: Joi.number().min(2).max(9999).required(),
         category: Joi.string().min(2).max(99).required(),
         description: Joi.string().min(2).max(99).required(),
         ingredients: Joi.string().min(2).max(99).required()
