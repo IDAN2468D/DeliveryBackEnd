@@ -3,6 +3,8 @@ const Joi = require("joi");
 
 
 const FoodsSchema = new mongoose.Schema({
+    id: String,
+    restaurantId: String,
     name: String,
     price: Number,
     image: String,
