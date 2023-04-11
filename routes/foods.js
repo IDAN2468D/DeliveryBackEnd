@@ -7,7 +7,7 @@ router.use(cors({
     methods: ["GET", "POST", "PUT", "DELETE"]
 }))
 
-router.get("/:foodId", async (req, res) => {
+router.get("/", async (req, res) => {
     const data = await FoodsModal.find({});
     res.json(data);
 })
