@@ -7,8 +7,9 @@ router.use(cors({
     methods: ["GET", "POST", "PUT", "DELETE"]
 }))
 
-router.get("/", async (req, res) => {
-    const data = await FoodsModal.find({});
+router.get("/:foodId", async (req, res) => {
+    let foodId = req?.params?.foodId;
+    const data = await FoodsModal.find({ foodId });
     res.json(data);
 })
 
